@@ -4,25 +4,26 @@
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  font-family: monospace;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+a {
+ text-decoration: none;
+ color: white;
+ transition: color 0.1s ease-out;
 }
 
+a:active {
+  color: #B915CC;
+}
+a:hover {
+  color: #8DE41C;
+}
 *::selection {
   background-color: #8DE41C;
+  color: black;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
 
 @media (min-width: 1024px) {
   body {
@@ -31,5 +32,8 @@ a,
   }
   h1 {
     font-size: 10rem;
+  }
+  h2 {
+    font-size: 2rem;
   }
 }

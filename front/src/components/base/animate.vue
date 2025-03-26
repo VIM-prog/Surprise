@@ -4,16 +4,13 @@
     <div class="image-wrapper">
       <div 
         class="image-container" 
-        :style="{ backgroundImage: `url(${url})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+        :style="{ backgroundImage: `url(${url})`, backgroundSize: 'cover'}"
       ></div>
       <div class="tags">
         <h3>#{{ tag1 }}</h3>
         <h3>#{{ tag2 }}</h3>
         <h3>#{{ tag3 }}</h3>
       </div>
-    </div>
-    <div>
-      <p></p>
     </div>
   </div>
 </template>
@@ -39,6 +36,7 @@ const props = defineProps({
   margin: 0 auto; 
 }
 
+
 .image-wrapper {
   position: relative;
   display: flex;
@@ -46,26 +44,25 @@ const props = defineProps({
 }
 
 .image-container {
-  width: 60vh;
-  height: 60vh;
+  width: 70vh;
+  height: 70vh;
 }
 
 .tags {
   position: absolute;
-  right: -100px; 
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  right: 50px;
+  max-width: 3vh;
 }
 
 h2 {
-  margin: 0;
   font-size: 3rem;
 }
 
 .tags h3 {
   margin: 0;
   font-size: 1.5rem;
-  background-color: white;
+
 }
 </style>

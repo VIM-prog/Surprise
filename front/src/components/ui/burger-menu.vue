@@ -6,16 +6,16 @@
     <a href="/" id="home" class="menu-item">
       <span class="menu-text">ГЛАВНАЯ</span>
     </a>
+    <a href="price" id="projects" class="menu-item">
+      <span class="menu-text">ПРАЙС-ЛИСТ</span>
+    </a>
     <a href="projects" id="projects" class="menu-item">
       <span class="menu-text">ПРОЕКТЫ</span>
     </a>
-    <a href="#" id="members" class="menu-item">
-      <span class="menu-text">УЧАСТНИКИ</span>
-    </a>
-    <a href="#" id="join" class="menu-item">
+    <a href="join" id="join" class="menu-item">
       <span class="menu-text">ПРИСОЕДИНИТЬСЯ</span>
     </a>
-    <a href="#" id="about" class="menu-item">
+    <a href="about" id="about" class="menu-item">
       <span class="menu-text">О НАС</span>
     </a>
   </Slide>

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <h3 :style="{ opacity: transperentValue}">(Our mission)</h3>
+      <h3 :style="{ opacity: transperentValue}">{{ purpose }}</h3>
       <div>
         <h2 class="right" :style="{ transform: `translateX(${offsetX}px)`}">{{ slogan }}</h2>
         <h2 class="left" :style="{ transform: `translateX(${offsetX2}px)`}">{{ slogan2 }}</h2>
@@ -18,6 +18,7 @@
     slogan: String,
     slogan2: String,
     description: String,
+    purpose: String,
   })
 
   function handleScroll() {
@@ -41,6 +42,7 @@
   
   <style scoped>
     .container {
+      height: 90vh;
       margin: 0 auto;
     }
     
