@@ -15,7 +15,10 @@ const props = defineProps({
   content: String,
   tag1: String,
   tag2: String,
-  tag3: String
+  tag3: String,
+  url1: String,
+  url2: String,
+  url3: String
 });
 const displayedText = ref("");
 onMounted(() => {
@@ -40,7 +43,8 @@ function typeText(word, currentIndex) {
   justify-content: center;
 }
 h1 {
-  min-width: 5em;
+  min-width: 6em;
+  text-align: center;
 }
 a {
   color: black;

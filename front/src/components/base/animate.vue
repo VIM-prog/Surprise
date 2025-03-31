@@ -7,9 +7,9 @@
         :style="{ backgroundImage: `url(${url})`, backgroundSize: 'cover'}"
       ></div>
       <div class="tags">
-        <h3>#{{ tag1 }}</h3>
-        <h3>#{{ tag2 }}</h3>
-        <h3>#{{ tag3 }}</h3>
+        <h3>{{ tag1 }}</h3>
+        <h3>{{ tag2 }}</h3>
+        <h3>{{ tag3 }}</h3>
       </div>
     </div>
   </div>
@@ -44,7 +44,8 @@ const props = defineProps({
 }
 
 .image-container {
-  width: 70vh;
+  margin: 0;
+  width: 90vh;
   height: 70vh;
 }
 
@@ -55,11 +56,10 @@ const props = defineProps({
   right: 50px;
   max-width: 3vh;
 }
-
 h2 {
-  font-size: 3rem;
+  margin: 0;
+  font-size: 6rem;
 }
-
 .tags h3 {
   margin: 0;
   font-size: 1.5rem;

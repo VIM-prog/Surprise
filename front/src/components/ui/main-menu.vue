@@ -35,8 +35,6 @@
     width: 100vw;
     margin: 0 auto;
     position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: center;
     user-select: none;
