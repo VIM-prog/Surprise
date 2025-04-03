@@ -26,11 +26,8 @@ export class PriceController {
   @Patch(':id')
   async edit(
     @Param('id') id: number,
-    @Body() updateData: UpdateServiceDto): Promise<Service> {
+    @Body() updateData: UpdateServiceDto): Promise<Service | null> {
     const updatedService = await this.priceService.edit(id, updateData);
-    if (!updatedService) {
-      throw new NotFoundException(`Service with ID ${id} not found`);
-    }
     return updatedService;
   }
   

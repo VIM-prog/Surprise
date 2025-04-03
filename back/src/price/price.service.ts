@@ -23,13 +23,13 @@ export class PriceService {
     });
   }
 
-  async edit(id: number, updateData: Partial<Service>): Promise<Service | null> {
-    const service = await this.serviceRepository.findOne({ where: { id } });
+  async edit(_id: number, updateData: Partial<Service>): Promise<Service | null> {
+    const service = await this.serviceRepository.findOne({ where: { id: _id } });
     if (!service) {
       return null;
     }
-    await this.serviceRepository.update(id, updateData);
-    return this.serviceRepository.findOne({ where: { id } });
+    await this.serviceRepository.update(_id, updateData);
+    return this.serviceRepository.findOne({ where: { id: _id } });
   }
 
   async delete(_id: number): Promise<Service | null> {
