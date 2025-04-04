@@ -25,6 +25,9 @@ export class Order {
   @Column()
   active: string;
 
+  @Column()
+  dateOrd: Date;
+
   @ManyToOne(() => Service, { eager: true }) 
   @JoinColumn({ name: 'serviceId' }) 
   service: Service;
