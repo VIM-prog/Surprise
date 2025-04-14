@@ -27,7 +27,7 @@ async function bootstrap() {
   if (nodeEnv === 'development') {
     app.enableCors({
       origin: host,
-      methods: ['GET', 'POST', 'DELETE']
+      methods: ['GET', 'POST', 'DELETE', 'PATCH']
     })  
     await app.listen(port);
   }

@@ -13,7 +13,7 @@
   
   function handleScroll() {
     requestAnimationFrame(() => {
-      offsetY.value = window.scrollY * -0.5
+      offsetY.value = window.scrollY * -0.8
       opacityValue.value = Math.max(1 - scrollY / 800, 0)
     })
   }
@@ -37,7 +37,6 @@
   }
   
   h1 {
-    font-family: monospace;
     position: fixed;
     margin: 0 auto;
     left: 5%;
@@ -47,4 +46,4 @@
     transition: transform 0.1s ease-out;
     user-select: none;
   }
-  </style>
+</style>

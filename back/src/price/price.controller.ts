@@ -18,6 +18,16 @@ export class PriceController {
     return this.priceService.findActive();
   }
 
+  @Get('forClients') 
+  async findForClient(): Promise<any> {
+    return this.priceService.findForClient();
+  }
+
+  @Get('forCorparations') 
+  async findForCorparation(): Promise<any> {
+    return this.priceService.findForCorparation();
+  }
+
   @Post()
   async create(@Body() createServiceDto: CreateServiceDto) {
   return this.priceService.create(createServiceDto);

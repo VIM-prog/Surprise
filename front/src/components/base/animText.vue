@@ -7,9 +7,9 @@
       </div>
       <p> {{ description }}</p>
     </div>
-  </template>
+</template>
   
-  <script setup>
+<script setup>
   import { ref, onMounted, onUnmounted } from 'vue'
   const offsetX = ref(0)
   const offsetX2 = ref(0)
@@ -38,16 +38,16 @@
   onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
   })
-  </script>
+</script>
   
-  <style scoped>
+<style scoped>
     .container {
       height: 90vh;
       margin: 0 auto;
     }
     
     .right, .left {
-      transition: transform 0.2s ease; 
+      transition: transform 0.6s ease; 
     }
     p{
       font-size: 2rem;
@@ -68,4 +68,4 @@
       padding: 0;
       margin-bottom: 0;
     }
-  </style>
+</style>

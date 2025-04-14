@@ -1,18 +1,15 @@
-<template>
-    <HeadTitle title="SURPRISE"></HeadTitle>
-    <OurMission 
-      purpose="(Our mission)"
-      slogan="Праздник-" 
-      slogan2="легко!"
-      description="Наша задача сделать такой праздник, который ты точно запомнишь"
-    ></OurMission>
-    
-  </template>
-  
-  <script setup>
-  import HeadTitle from '@/components/base/headTitle.vue';
-  import OurMission from '@/components/base/ourMission.vue';
-  </script>
+<script setup lang="ts">
+import AnimText from '@/components/base/animText.vue';
+import MainTitle from '@/components/base/mainTitle.vue';
 
-  <style scoped>
-  </style>
+</script>
+
+<template>
+    <MainTitle title="SURPRISE"></MainTitle>
+    <AnimText
+    purpose="(Our mission)"
+    slogan="Праздник-" 
+    slogan2="легко!"
+    description="Наша задача сделать такой праздник, который ты точно запомнишь"
+    ></AnimText>
+</template>

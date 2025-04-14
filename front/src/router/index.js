@@ -1,18 +1,19 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Home from "./pages/home.vue";
-import headerApp from "./layout/headApp.vue";
-import Projects from "./pages/projects.vue";
-import NotFound from "./layout/Errors/notFound.vue";
-import About from "./pages/about.vue";
-import Join from "./pages/join.vue";
-import Price from "./pages/price.vue";
-import Admin from "./pages/admin.vue";
+import NotFound from '@/layout/Errors/notFound.vue'
+import HeadApp from '@/layout/headApp.vue'
+import About from '@/pages/about.vue'
+import Admin from '@/pages/admin.vue'
+import Home from '@/pages/home.vue'
+import Join from '@/pages/join.vue'
+import Price from '@/pages/price.vue'
+import Projects from '@/pages/projects.vue'
+import { createRouter, createWebHistory } from 'vue-router'
 
-
-const routes = [
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
     {
       path: '/',
-      component:headerApp,
+      component: HeadApp,
       children: [
         {
             path: '',
@@ -45,11 +46,7 @@ const routes = [
         name: 'NotFound',
         component: NotFound
     }
-  ];
-  
-  const router = createRouter({
-    history: createWebHistory(),
-    routes,
-  });
-  export default router
-  
+  ]
+})
+
+export default router

@@ -1,15 +1,15 @@
 <script setup>
-import { ref, onMounted, computed, onUnmounted } from 'vue';
+import BurgerMenu from '@/components/ui/burgerMenu.vue';
+import MainMenu from '@/components/ui/mainMenu.vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
-import Menu from '@/components/ui/main-menu.vue';
-import BurgerMenu from '@/components/ui/burger-menu.vue';
+
 
 const route = useRoute();
 const isMobile = ref(window.innerWidth <= 768);
 const handleResize = () => {
   isMobile.value = window.innerWidth <= 768;
 };
-const isAdmin = computed(() => route.name === 'Admin');
 
 onMounted(() => {
   window.addEventListener('resize', handleResize);
@@ -20,8 +20,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Menu class="fix" v-show="!isMobile && !isAdmin"></Menu>
-  <BurgerMenu class="fix" v-show="isMobile && !isAdmin"></BurgerMenu>
+  <MainMenu class="fix" v-show="!isMobile"></MainMenu>
+  <BurgerMenu class="fix" v-show="isMobile"></BurgerMenu>
   <router-view></router-view>
 </template>
 

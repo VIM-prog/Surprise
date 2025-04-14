@@ -2,8 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Order } from './entites/orders.entity';
 import { IsNull, Repository } from 'typeorm';
-import { Service } from './entites/service.entity';
-import { Job } from './entites/jobs.entity';
 import { CreateOrderDto } from './dto/create-order.dto';
 
 @Injectable()
@@ -11,10 +9,6 @@ export class OrdersService {
     constructor(
         @InjectRepository(Order)
         private readonly orderRepository: Repository<Order>,
-        @InjectRepository(Service)
-        private readonly serviceRepository: Repository<Service>,
-        @InjectRepository(Job)
-        private readonly jobRepository: Repository<Service>,
     ) {}
 
      async findAll(): Promise<Order[]> {

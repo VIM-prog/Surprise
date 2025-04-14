@@ -23,6 +23,18 @@ export class PriceService {
     });
   }
 
+  async findForCorparation(): Promise<Service[]> {
+    return this.serviceRepository.find({
+      where: {active: '1', type: '1'}
+    });
+  }
+
+  async findForClient(): Promise<Service[]> {
+    return this.serviceRepository.find({
+      where: {active: '1', type: '2'}
+    });
+  }
+
   async edit(_id: number, updateData: Partial<Service>): Promise<Service | null> {
     const service = await this.serviceRepository.findOne({ where: { id: _id } });
     if (!service) {

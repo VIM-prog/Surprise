@@ -1,12 +1,10 @@
-<template>
-    <AnimateText content="#PRICE LIST"
-        ></AnimateText>
-    <Cards></Cards>
-</template>
-<script setup>
+<script setup lang="ts">
+import HeadAnim from '@/components/base/headAnim.vue';
+import CardsList from '@/modules/prices/widgets/cardsList.vue';
 
-import AnimateText from '@/components/base/animateText.vue';
-import Cards from '@/components/base/cards.vue';
 </script>
-<style scoped>
-</style>
+
+<template>
+    <HeadAnim content="#PRICE LIST"></HeadAnim>
+    <CardsList></CardsList>
+</template>
